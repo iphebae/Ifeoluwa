@@ -1,0 +1,210 @@
+/* Tablet and Mobile Breakpoints */
+@media (max-width: 1024px) {
+    /* Typography Adjustments */
+    h1 {
+        font-size: var(--font-size-5xl);
+    }
+    
+    h2 {
+        font-size: var(--font-size-4xl);
+    }
+    
+    h3 {
+        font-size: var(--font-size-2xl);
+    }
+    
+    /* Navigation */
+    .nav__toggle {
+        display: block;
+    }
+    
+    .nav__list {
+        position: fixed;
+        top: 80px;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        background: rgba(15, 23, 42, 0.98);
+        backdrop-filter: blur(20px);
+        padding: var(--space-8);
+        gap: var(--space-4);
+        transform: translateY(-100%);
+        opacity: 0;
+        visibility: hidden;
+        transition: all var(--transition-base);
+        border-bottom: 1px solid var(--color-border);
+    }
+    
+    .nav__list[aria-expanded="true"] {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    .nav__link {
+        display: block;
+        padding: var(--space-3) 0;
+        font-size: var(--font-size-base);
+    }
+    
+    /* Hero Section */
+    .hero__content {
+        grid-template-columns: 1fr;
+        gap: var(--space-12);
+        text-align: center;
+    }
+    
+    .hero__title {
+        font-size: var(--font-size-4xl);
+    }
+    
+    .hero__highlight {
+        font-size: var(--font-size-2xl);
+    }
+    
+    .hero__actions {
+        justify-content: center;
+    }
+    
+    .image-frame::before {
+        top: -15px;
+        right: -15px;
+    }
+    
+    /* About Section */
+    .about__content {
+        grid-template-columns: 1fr;
+        gap: var(--space-12);
+    }
+    
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    /* Skills Grid */
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    /* Projects Section */
+    .project-card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--space-6);
+    }
+    
+    .project-card__link {
+        align-self: flex-end;
+    }
+    
+    /* Timeline */
+    .timeline::before {
+        left: 0;
+    }
+    
+    .timeline-item {
+        width: 100%;
+        left: 0 !important;
+        text-align: left !important;
+        padding-left: 40px;
+    }
+    
+    .timeline-item__marker {
+        left: -10px !important;
+        right: auto !important;
+    }
+    
+    /* Footer */
+    .footer__content {
+        grid-template-columns: 1fr;
+        gap: var(--space-8);
+    }
+    
+    .footer__bottom {
+        flex-direction: column;
+        gap: var(--space-4);
+        text-align: center;
+    }
+}
+
+/* Mobile Breakpoint */
+@media (max-width: 640px) {
+    /* Typography */
+    h1 {
+        font-size: var(--font-size-4xl);
+    }
+    
+    h2 {
+        font-size: var(--font-size-3xl);
+    }
+    
+    /* Section Padding */
+    .section {
+        padding: var(--space-12) 0;
+    }
+    
+    /* Container Padding */
+    .container {
+        padding: 0 var(--space-4);
+    }
+    
+    /* Hero */
+    .hero__title {
+        font-size: var(--font-size-3xl);
+    }
+    
+    .hero__highlight {
+        font-size: var(--font-size-xl);
+    }
+    
+    .hero__description {
+        font-size: var(--font-size-base);
+    }
+    
+    .hero__actions {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .btn {
+        width: 100%;
+    }
+    
+    /* Stats Grid */
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Skills Grid */
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Contact Info */
+    .contact-info {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Scroll Top Button */
+    .scroll-top {
+        bottom: var(--space-4);
+        right: var(--space-4);
+        width: 48px;
+        height: 48px;
+    }
+}
+
+/* Small Mobile */
+@media (max-width: 375px) {
+    h1 {
+        font-size: var(--font-size-3xl);
+    }
+    
+    h2 {
+        font-size: var(--font-size-2xl);
+    }
+    
+    .section__title {
+        font-size: var(--font-size-2xl);
+    }
+}
